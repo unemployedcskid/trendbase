@@ -197,7 +197,7 @@ export default function BlogManagePage() {
                     </div>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-gray-600 line-clamp-3 mb-4">
+                    <p className="text-gray-600 line-clamp-3 mb-4 break-words overflow-hidden">
                       {post.excerpt}
                     </p>
                     <div className="flex items-center justify-between">

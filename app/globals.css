@@ -123,3 +123,81 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Blog content word wrapping and overflow handling */
+.blog-content {
+  word-wrap: break-word;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+  max-width: 100%;
+}
+
+/* Ensure long URLs and code snippets wrap properly */
+.blog-content a,
+.blog-content code,
+.blog-content pre {
+  word-break: break-all;
+  overflow-wrap: break-word;
+}
+
+/* Handle extremely long strings and prevent horizontal scrolling */
+.blog-content * {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Specific handling for inline code and links */
+.blog-content code:not(pre code) {
+  word-break: break-all;
+  white-space: normal;
+}
+
+.blog-content a {
+  word-break: break-all;
+  overflow-wrap: break-word;
+}
+
+/* Handle long words and prevent horizontal overflow */
+.blog-content p,
+.blog-content div,
+.blog-content span {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  max-width: 100%;
+}
+
+/* Ensure form textareas handle long content properly */
+textarea {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+/* Additional protection for any content that might overflow */
+.content-wrapper {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Responsive content handling */
+@media (max-width: 768px) {
+  .blog-content {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+  
+  .blog-content p {
+    margin-bottom: 1rem;
+  }
+}
+
+/* Ensure content doesn't overflow on very small screens */
+@media (max-width: 480px) {
+  .blog-content {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+}

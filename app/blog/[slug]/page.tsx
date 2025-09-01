@@ -150,8 +150,8 @@ export default function BlogPostPage() {
             </div>
 
             {/* Post Content */}
-            <div className="prose prose-lg max-w-none">
-              <div className="text-gray-700 leading-relaxed whitespace-pre-wrap">
+            <div className="prose prose-lg max-w-none content-wrapper">
+              <div className="text-gray-700 leading-relaxed whitespace-pre-wrap break-words overflow-hidden blog-content">
                 {post.content}
               </div>
             </div>
